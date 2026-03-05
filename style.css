@@ -51,3 +51,16 @@ body {
   background-color: #000033; /* deep space blue fallback */
   color: #00ff00; /* lime text default */
 }
+.star {
+  position: fixed;
+  width: 3px;
+  height: 3px;
+  background: white;
+  border-radius: 50%;
+  box-shadow: 0 0 10px white;
+  animation: fall linear forwards;
+  z-index: -1;
+}
+@keyframes fall {
+  to { transform: translateY(100vh) rotate(360deg); opacity: 0; }
+}
