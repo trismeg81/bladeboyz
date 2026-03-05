@@ -1,66 +1,97 @@
+/* BLADEBOYZ.COM - MAXIMUM 90s RADNESS - No Cursive, Pure Shred Energy */
+
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap');
+
 body {
-    background: url('starry-background.gif') repeat; /* Tiled 90's space background */
-    color: lime;
-    font-family: 'Comic Sans MS', cursive;
+    background: url('https://www.textures.com/system/gallery/photos/Grunge%20&%20Damaged/Stars/122456/Stars0130_600.jpg') repeat;
+    background-color: #000033; /* deep space blue fallback if image flakes */
+    color: #00ff00; /* classic lime green text */
+    font-family: 'VT323', 'Courier New', monospace, sans-serif; /* blocky retro terminal for body text */
     text-align: center;
     margin: 0;
     padding: 20px;
+    min-height: 100vh; /* full height for falling stars */
 }
 
-h1 {
-    color: hotpink;
-    font-size: 48px;
-    text-shadow: 2px 2px yellow;
+/* Big headers - pixel arcade style */
+h1, marquee {
+    font-family: 'Press Start 2P', Impact, 'Arial Black', sans-serif;
+    font-size: 3em; /* big & bold */
+    color: #ff00ff; /* hot pink blast */
+    text-shadow: 4px 4px 0 #000, -4px -4px 0 #000, 4px -4px 0 #000, -4px 4px 0 #000; /* chunky black outline */
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin: 20px 0;
 }
 
 h2 {
     color: cyan;
+    font-family: 'Press Start 2P', Impact, sans-serif;
+    font-size: 2em;
+    text-shadow: 3px 3px #000;
 }
 
+/* Blinking crew pic & other elements */
 .blinking {
-    animation: blink 1s infinite;
+    animation: blink 1.5s infinite; /* faster blink for chaos */
+    max-width: 400px; /* bigger but still responsive - tweak as needed */
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 30px auto;
+    border: 6px solid hotpink;
+    box-shadow: 0 0 25px lime, 0 0 50px cyan; /* double neon glow */
+    filter: brightness(1.2) saturate(1.4); /* extra pop */
 }
 
 @keyframes blink {
-    50% { opacity: 0; }
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.4; }
 }
 
+/* Links - wavy underline stays, but bold */
 a {
     color: yellow;
     text-decoration: underline wavy red;
+    font-weight: bold;
+    transition: color 0.3s;
 }
 
-.footer {
-    margin-top: 50px;
-    font-size: 12px;
-    color: white;
+a:hover {
+    color: lime;
 }
-.blinking {
-    animation: blink 4s infinite; /* Keep your 90s blink if you like it */
-    max-width: 300px;             /* Adjust this number: 400px for smaller, 800px for bigger */
-    width: 100%;                  /* Makes it fill up to max-width on smaller screens */
-    height: auto;                 /* Preserves aspect ratio—no squishing */
-    display: block;               /* Centers it easily */
-    margin: 20px auto;            /* Adds breathing room above/below, centers horizontally */
-    border: 5px solid hotpink;    /* Extra 90s flair */
-    box-shadow: 0 0 20px lime;    /* Glowy neon effect */
-    filter: brightness(1.1) saturate(1.3); /* Pops the colors a bit */
-}
-body {
-  background: url('https://www.textures.com/system/gallery/photos/Grunge%20&%20Damaged/Stars/122456/Stars0130_600.jpg') repeat;
-  background-color: #000033; /* deep space blue fallback */
-  color: #00ff00; /* lime text default */
-}
+
+/* Falling stars - keep if you added the JS */
 .star {
-  position: fixed;
-  width: 3px;
-  height: 3px;
-  background: white;
-  border-radius: 50%;
-  box-shadow: 0 0 10px white;
-  animation: fall linear forwards;
-  z-index: -1;
+    position: fixed;
+    width: 4px;
+    height: 4px;
+    background: white;
+    border-radius: 50%;
+    box-shadow: 0 0 12px white, 0 0 20px cyan;
+    animation: fall linear forwards;
+    pointer-events: none;
+    z-index: -1;
 }
+
 @keyframes fall {
-  to { transform: translateY(100vh) rotate(360deg); opacity: 0; }
+    to {
+        transform: translateY(100vh) rotate(720deg);
+        opacity: 0;
+    }
+}
+
+/* Footer */
+.footer {
+    margin-top: 60px;
+    font-size: 14px;
+    color: white;
+    opacity: 0.8;
+}
+
+/* Mobile tweaks */
+@media (max-width: 768px) {
+    h1, marquee { font-size: 2.2em; }
+    h2 { font-size: 1.6em; }
+    .blinking { max-width: 300px; }
 }
