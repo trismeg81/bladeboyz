@@ -36,8 +36,8 @@ a {
     color: white;
 }
 .blinking {
-    animation: blink 2s infinite; /* Keep your 90s blink if you like it */
-    max-width: 600px;             /* Adjust this number: 400px for smaller, 800px for bigger */
+    animation: blink 1s infinite; /* Keep your 90s blink if you like it */
+    max-width: 400px;             /* Adjust this number: 400px for smaller, 800px for bigger */
     width: 100%;                  /* Makes it fill up to max-width on smaller screens */
     height: auto;                 /* Preserves aspect ratio—no squishing */
     display: block;               /* Centers it easily */
