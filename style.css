@@ -1,1 +1,37 @@
+body {
+    background: url('starry-background.gif') repeat; /* Tiled 90's space background */
+    color: lime;
+    font-family: 'Comic Sans MS', cursive;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+}
 
+h1 {
+    color: hotpink;
+    font-size: 48px;
+    text-shadow: 2px 2px yellow;
+}
+
+h2 {
+    color: cyan;
+}
+
+.blinking {
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    50% { opacity: 0; }
+}
+
+a {
+    color: yellow;
+    text-decoration: underline wavy red;
+}
+
+.footer {
+    margin-top: 50px;
+    font-size: 12px;
+    color: white;
+}
