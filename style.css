@@ -46,3 +46,8 @@ a {
     box-shadow: 0 0 20px lime;    /* Glowy neon effect */
     filter: brightness(1.1) saturate(1.3); /* Pops the colors a bit */
 }
+body {
+  background: url('https://www.textures.com/system/gallery/photos/Grunge%20&%20Damaged/Stars/122456/Stars0130_600.jpg') repeat;
+  background-color: #000033; /* deep space blue fallback */
+  color: #00ff00; /* lime text default */
+}
