@@ -22,7 +22,6 @@
     0% { transform: translateX(0); }
     100% { transform: translateX(-100%); }
 }
-.logo
 
 body {
     background: url('https://www.textures.com/system/gallery/photos/Grunge%20&%20Damaged/Stars/122456/Stars0130_600.jpg') repeat;
