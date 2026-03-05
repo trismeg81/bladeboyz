@@ -69,6 +69,29 @@ h2 {
     0%, 100% { opacity: 1; }
     50% { opacity: 0.4; }
 }
+/* Crew photo specific container - centers + spacing */
+.crew-pic-container {
+    text-align: center;
+    margin: 40px 0;          /* extra breathing room under the vid */
+}
+
+/* Override/enhance for this specific pic if needed */
+.crew-pic {
+    width: 300px;            /* your requested fixed width */
+    height: auto;            /* preserves tall portrait ratio */
+    max-width: 100%;         /* safe on mobile */
+}
+
+/* Optional hover chaos boost - amps the existing glow */
+.crew-pic:hover {
+    box-shadow: 
+        0 0 35px lime,
+        0 0 60px cyan,
+        0 0 90px hotpink;
+    filter: brightness(1.4) saturate(1.6);
+    transform: scale(1.08);
+    transition: all 0.4s ease-out;
+}
 
 /* Links - wavy underline stays, but bold */
 a {
