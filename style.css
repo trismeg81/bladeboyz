@@ -1,6 +1,7 @@
 /* BLADEBOYZ.COM - MAXIMUM 90s RADNESS - No Cursive, Pure Shred Energy */
 
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap');
+
 .marquee-container {
     overflow: hidden;
     white-space: nowrap;
@@ -69,6 +70,7 @@ h2 {
     0%, 100% { opacity: 1; }
     50% { opacity: 0.4; }
 }
+
 /* Crew photo specific container - centers + spacing */
 .crew-pic-container {
     text-align: center;
@@ -133,9 +135,30 @@ a:hover {
     opacity: 0.8;
 }
 
+/* === NEW: Main logo placement under marquee, above "Our Sick Vidz" === */
+.logo-container {
+    text-align: center;
+    margin: 40px 0 60px;     /* Good spacing: 40px below marquee, 60px above vidz section for emphasis */
+    padding: 0 10px;
+}
+
+.main-logo {
+    max-width: 90%;          /* Responsive: won't overflow on mobile */
+    height: auto;
+    width: 700px;            /* Desktop "hero" size — feel free to tweak to 600px / 800px etc. */
+    filter: drop-shadow(0 10px 20px rgba(255,0,255,0.7)); /* Neon magenta glow shadow */
+    transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.main-logo:hover {
+    transform: scale(1.05);  /* Subtle pop on hover */
+    filter: drop-shadow(0 15px 30px rgba(0,255,0,0.8)) brightness(1.15); /* Lime boost */
+}
+
 /* Mobile tweaks */
 @media (max-width: 768px) {
     h1, marquee { font-size: 2.2em; }
     h2 { font-size: 1.6em; }
     .blinking { max-width: 300px; }
+    .main-logo { width: 90%; } /* Override fixed width for smaller screens */
 }
